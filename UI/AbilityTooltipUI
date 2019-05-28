@@ -1,0 +1,22 @@
+// ======================================================================
+//    Land Forgotten : Ability Tooltip UI
+//    Written by     : Ramon Partida, 2019 
+//    Version        : 1.0
+//    Program        : Unity 2018.2.18f1
+// ======================================================================
+using UnityEngine;
+
+public class AbilityToolTip : MonoBehaviour 
+{
+	[SerializeField] private TMPro.TMP_Text _DisplayInformationText;
+
+	public void ChangeInformation(AbilityData newInfo)
+	{
+		// Format this somehow
+		_DisplayInformationText.text = "<b>Name: </b>"     + newInfo.AbilityName + "\n"
+									 + "<b>Cost: </b>"     + newInfo.Cost        + "\n"
+									 + "<b>Cooldown: </b>" + newInfo.Cooldown    + "\n"
+									 + "<b>Description:\n</b>"
+									 + newInfo.Description;
+	}
+}
